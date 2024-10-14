@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:todo/core/styling/my_color.dart';
+import 'package:todo/features/home/ui/widget/home.dart';
 
 void main() {
   runApp(const MyApp());
@@ -7,13 +10,19 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        title: 'Flutter Demo',
-        theme:
-            ThemeData() // This trailing comma makes auto-formatting nicer for build methods.
-        );
+    return ScreenUtilInit(
+        designSize: const Size(375, 812),
+        minTextAdapt: true,
+        child: MaterialApp(
+          title: 'To Do App',
+          theme: ThemeData(
+            primaryColor: AppColors.primaryColor,
+            scaffoldBackgroundColor: Colors.white,
+          ),
+          debugShowCheckedModeBanner: false,
+          home: const Home(),
+        ));
   }
 }
