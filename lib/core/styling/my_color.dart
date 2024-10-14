@@ -8,4 +8,5 @@ class AppColors {
     Color(0xff4568dc),
     Color(0xffb06ab3)
   ];
+  static const Color black = Color.fromARGB(255, 0, 0, 0);
 }

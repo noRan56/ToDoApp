@@ -8,30 +8,21 @@ class CustomFAB extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      // appBar: AppBar(
-      //   title: Text(AppStrings.mainTitle),
-      //   centerTitle: true,
-      // ),
-      // body: const SingleChildScrollView(
-      //   child: Column(),
-      // ),
-      floatingActionButton: GestureDetector(
-        onTap: () {
-          print(AppStrings.addNewTask);
-        },
-        child: Container(
-          height: 70.h,
-          width: 70.w,
-          decoration: BoxDecoration(
-            color: AppColors.primaryColor,
-            borderRadius: BorderRadius.circular(45),
-          ),
-          child: const Center(
-            child: Icon(
-              Icons.add,
-              color: AppColors.white,
-            ),
+    return GestureDetector(
+      onTap: () {
+        print(AppStrings.addNewTask);
+      },
+      child: Container(
+        height: 70.h,
+        width: 70.w,
+        decoration: BoxDecoration(
+          color: AppColors.primaryColor,
+          borderRadius: BorderRadius.circular(45),
+        ),
+        child: const Center(
+          child: Icon(
+            Icons.add,
+            color: AppColors.white,
           ),
         ),
       ),
