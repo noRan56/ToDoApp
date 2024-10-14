@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:todo/core/styling/my_color.dart';
-import 'package:todo/features/home/ui/widget/home.dart';
+import 'package:todo/features/home/ui/widget/floating_action_btn.dart';
 
 void main() {
   runApp(const MyApp());
@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
             scaffoldBackgroundColor: Colors.white,
           ),
           debugShowCheckedModeBanner: false,
-          home: const Home(),
+          // home: const Home(),
         ));
   }
 }
